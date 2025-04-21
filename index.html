@@ -1,0 +1,28 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>昇陽名片預覽器</title><link rel="icon" href="logo.png"/><style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Sans+TC:wght@400;700&family=Roboto:wght@400;700&display=swap');
+      html, body, #root {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #e3ecfa 0%, #f6fafd 100%) !important;
+        font-family: 'Noto Sans TC', 'Inter', 'Roboto', 'Microsoft JhengHei', Arial, sans-serif;
+      }
+      #root {
+        background: transparent !important;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        left: 0; top: 0; width: 100vw; height: 100vh;
+        background: url('logo.png') no-repeat center 32% / 420px, linear-gradient(120deg, #e3ecfa88 0%, #f6fafd00 60%, #e3ecfa88 100%);
+        opacity: 0.08;
+        z-index: 0;
+        pointer-events: none;
+      }
+      input.custom-checkbox:disabled {
+        opacity: 1 !important;
+        filter: none !important;
+        -webkit-filter: grayscale(0) !important;
+        background: none !important;
+        color: inherit !important;
+        cursor: pointer !important;
+        -webkit-appearance: checkbox !important;
+        appearance: checkbox !important;
+      }</style><link rel="icon" href="/logo.png"><script defer="defer" src="/bundle.js"></script></head><body><div id="root"></div><script src="./src/index.js"></script></body></html>
