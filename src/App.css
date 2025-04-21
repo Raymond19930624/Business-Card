@@ -1,0 +1,8 @@
+.custom-checkbox:disabled {
+  opacity: 1 !important;
+  filter: none !important;
+  -webkit-filter: grayscale(0) !important;
+  background: none !important;
+  color: inherit !important;
+  cursor: pointer !important;
+}
