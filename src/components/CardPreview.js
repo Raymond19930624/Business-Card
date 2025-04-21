@@ -443,7 +443,7 @@ export default function CardPreview({ employee, fields, downloadMode, miaoliExtV
           }}
         >
           {/* 背面：顯示 card-back.svg 圖片 */}
-          <img src="/card-back.svg" alt="名片背面" style={{ width: '100%', height: '100%', objectFit: 'cover', borderTopLeftRadius: 0, borderTopRightRadius: 16, borderBottomLeftRadius: 16, borderBottomRightRadius: 0 }} />
+          <img src={require('../../public/card-back.svg').default} alt="名片背面" style={{ width: '100%', height: '100%', objectFit: 'cover', borderTopLeftRadius: 0, borderTopRightRadius: 16, borderBottomLeftRadius: 16, borderBottomRightRadius: 0 }} />
         </div>
       </div>
     </div>
