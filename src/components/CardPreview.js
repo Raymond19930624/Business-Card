@@ -395,7 +395,7 @@ export default function CardPreview({ employee, fields, downloadMode, miaoliExtV
               if (item.label === 'Line ID') showValue = 'Line ID：' + item.value;
               return (
                 <div key={item.label + idx} style={{ position: 'absolute', left: 46.5, top: startTop + idx * gap - 3, fontSize: 8, fontFamily: item.label === '統一編號' || item.label === '手機' || item.label === '信箱' || item.label === '電話苗栗' || item.label === '電話台北' || item.label === '分機(苗栗)' || item.label === '分機(台北)' || item.label === 'Line ID' ? `'Inter', 'Roboto', Arial, sans-serif` : `'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif`, color: '#232323', display: 'flex', alignItems: 'center' }}>
-                  <img src={item.icon} alt={item.label} style={{ position: 'absolute', left: -16, width: '10px', height: '10px', filter: 'brightness(0) invert(1)', verticalAlign: 'middle' }} />
+                  <img src={item.icon} alt={item.label} style={{ position: 'absolute', left: -16, width: '10px', height: '10px', verticalAlign: 'middle' }} />
                   {showValue}
                 </div>
               );
