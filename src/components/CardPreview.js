@@ -1,14 +1,15 @@
 import React, { useRef, useState, useEffect } from "react";
 import html2canvas from "html2canvas";
+import backgroundSvg from '../../public/background.svg';
 
 // ICON 路徑對應
 const iconPaths = {
-  mobile: '/Mobile.svg',
-  phone: '/Phone.svg',
-  map: '/Map.svg',
-  email: '/Email.svg',
-  vat: '/VAT.svg',
-  line: '/line.svg',
+  mobile: '/Business-Card/Mobile.svg',
+  phone: '/Business-Card/Phone.svg',
+  map: '/Business-Card/Map.svg',
+  email: '/Business-Card/Email.svg',
+  vat: '/Business-Card/VAT.svg',
+  line: '/Business-Card/line.svg',
 };
 
 const CARD_WIDTH_PX = 340;
@@ -17,7 +18,7 @@ const CARD_HEIGHT_PX = 204;
 const cardFont = `'Noto Sans TC', 'Inter', 'Roboto', 'Microsoft JhengHei', Arial, sans-serif`;
 
 const cardBg = {
-  background: `url('/background.svg') center/cover no-repeat`,
+  background: `url(${backgroundSvg}) center/cover no-repeat`,
   boxShadow: '0 4px 24px #204a7422',
   padding: 0,
   overflow: 'hidden',
@@ -390,14 +391,14 @@ export default function CardPreview({ employee, fields, downloadMode, miaoliExtV
           ))}
           {(() => {
             const infoFields = [
-              fields["手機"] && employee["手機"] ? { label: '手機', value: formatPhoneNumber(employee["手機"]), icon: '/mobile.svg' } : null,
-              fields["苗栗電話"] ? { label: '苗栗電話', value: `${MIAOLI_TEL}${miaoliExtVisible && employee["分機(苗栗)"] ? ` ext.${employee["分機(苗栗)"]}` : ''}`, icon: '/phone.svg' } : null,
-              fields["台北電話"] ? { label: '台北電話', value: TAIPEI_TEL, icon: '/phone.svg' } : null,
-              employee["信箱"] ? { label: '信箱', value: employee["信箱"], icon: '/email.svg' } : null,
-              { label: '統編', value: '56153007', icon: '/vat.svg' },
-              fields["苗栗地址"] ? { label: '苗栗地址', value: MIAOLI_ADDR, icon: '/map.svg' } : null,
-              fields["台北地址"] ? { label: '台北地址', value: TAIPEI_ADDR, icon: '/map.svg' } : null,
-              lineId ? { label: 'Line ID', value: lineId, icon: '/line.svg' } : null,
+              fields["手機"] && employee["手機"] ? { label: '手機', value: formatPhoneNumber(employee["手機"]), icon: iconPaths.mobile } : null,
+              fields["苗栗電話"] ? { label: '苗栗電話', value: `${MIAOLI_TEL}${miaoliExtVisible && employee["分機(苗栗)"] ? ` ext.${employee["分機(苗栗)"]}` : ''}`, icon: iconPaths.phone } : null,
+              fields["台北電話"] ? { label: '台北電話', value: TAIPEI_TEL, icon: iconPaths.phone } : null,
+              employee["信箱"] ? { label: '信箱', value: employee["信箱"], icon: iconPaths.email } : null,
+              { label: '統編', value: '56153007', icon: iconPaths.vat },
+              fields["苗栗地址"] ? { label: '苗栗地址', value: MIAOLI_ADDR, icon: iconPaths.map } : null,
+              fields["台北地址"] ? { label: '台北地址', value: TAIPEI_ADDR, icon: iconPaths.map } : null,
+              lineId ? { label: 'Line ID', value: lineId, icon: iconPaths.line } : null,
             ].filter(Boolean);
             const startTop = 107.97;
             const gap = 12.5;
