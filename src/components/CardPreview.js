@@ -1,14 +1,13 @@
 import React, { useRef, useState, useEffect } from "react";
 import html2canvas from "html2canvas";
-import backgroundSvg from '../../public/background.svg';
 
 // ICON 路徑對應
 const iconPaths = {
-  mobile: '/Business-Card/Mobile.svg',
-  phone: '/Business-Card/Phone.svg',
-  map: '/Business-Card/Map.svg',
-  email: '/Business-Card/Email.svg',
-  vat: '/Business-Card/VAT.svg',
+  mobile: '/Business-Card/mobile.svg',
+  phone: '/Business-Card/phone.svg',
+  map: '/Business-Card/map.svg',
+  email: '/Business-Card/email.svg',
+  vat: '/Business-Card/vat.svg',
   line: '/Business-Card/line.svg',
 };
 
@@ -18,7 +17,7 @@ const CARD_HEIGHT_PX = 204;
 const cardFont = `'Noto Sans TC', 'Inter', 'Roboto', 'Microsoft JhengHei', Arial, sans-serif`;
 
 const cardBg = {
-  background: `url(${backgroundSvg}) center/cover no-repeat`,
+  background: `url('/Business-Card/background.svg') center/cover no-repeat`,
   boxShadow: '0 4px 24px #204a7422',
   padding: 0,
   overflow: 'hidden',
@@ -32,23 +31,6 @@ const cardBg = {
   fontFamily: cardFont
 };
 
-const NAME_CENTER = 275;
-
-// === 中文標記說明 ===
-// 員工姓名(中)：中文姓名
-// 員工姓名(英)：英文姓名
-// 部門(中)：中文部門
-// 部門(英)：英文部門
-// 職位(中)：中文職稱
-// 職位(英)：英文職稱
-// 手機：手機
-// 分機(苗栗)：苗栗電話
-// 分機(台北)：台北電話
-// 地址(苗栗)：苗栗地址
-// 地址(台北)：台北地址
-// 信箱：信箱
-// 統一編號：統一編號
-
 const TAIPEI_TEL = "02-7709-2525";
 const MIAOLI_TEL = "037-230388";
 const TAIPEI_ADDR = "台北市松山區南京東路四段161號6樓";
@@ -58,7 +40,7 @@ const styles = {
   // 員工姓名(中)
   員工姓名中: {
     position: 'absolute',
-    left: NAME_CENTER,
+    left: 275,
     top: 43,
     fontSize: 16,
     fontFamily: `'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif`,
@@ -68,7 +50,7 @@ const styles = {
   // 員工姓名(英)
   員工姓名英: {
     position: 'absolute',
-    left: NAME_CENTER,
+    left: 275,
     top: 63,
     fontSize: 9,
     fontFamily: `'Inter', 'Roboto', Arial, sans-serif`,
@@ -443,7 +425,7 @@ export default function CardPreview({ employee, fields, downloadMode, miaoliExtV
           }}
         >
           {/* 背面：顯示 card-back.svg 圖片 */}
-          <img src={require('../../public/card-back.svg').default} alt="名片背面" style={{ width: '100%', height: '100%', objectFit: 'cover', borderTopLeftRadius: 0, borderTopRightRadius: 16, borderBottomLeftRadius: 16, borderBottomRightRadius: 0 }} />
+          <img src="/Business-Card/card-back.svg" alt="名片背面" style={{ width: '100%', height: '100%', objectFit: 'cover', borderTopLeftRadius: 0, borderTopRightRadius: 16, borderBottomLeftRadius: 16, borderBottomRightRadius: 0 }} />
         </div>
       </div>
     </div>
