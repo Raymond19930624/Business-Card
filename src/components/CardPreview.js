@@ -1,14 +1,14 @@
 import React, { useRef, useState, useEffect } from "react";
 import html2canvas from "html2canvas";
 
-// ICON 路徑對應
+// ICON 路徑對應（使用相對路徑，確保本地與 GitHub Pages 都能顯示）
 const iconPaths = {
-  mobile: '/Business-Card/mobile.svg',
-  phone: '/Business-Card/phone.svg',
-  map: '/Business-Card/map.svg',
-  email: '/Business-Card/email.svg',
-  vat: '/Business-Card/vat.svg',
-  line: '/Business-Card/line.svg',
+  mobile: 'mobile.svg',
+  phone: 'phone.svg',
+  map: 'map.svg',
+  email: 'email.svg',
+  vat: 'vat.svg',
+  line: 'line.svg',
 };
 
 const CARD_WIDTH_PX = 340;
@@ -17,7 +17,7 @@ const CARD_HEIGHT_PX = 204;
 const cardFont = `'Noto Sans TC', 'Inter', 'Roboto', 'Microsoft JhengHei', Arial, sans-serif`;
 
 const cardBg = {
-  background: `url('/Business-Card/background.svg') center/cover no-repeat`,
+  background: `url('background.svg') center/cover no-repeat`,
   boxShadow: '0 4px 24px #204a7422',
   padding: 0,
   overflow: 'hidden',
@@ -426,7 +426,7 @@ export default function CardPreview({ employee, fields, downloadMode, miaoliExtV
         >
           {/* 背面：顯示 card-back.svg 圖片 */}
           <img 
-            src="/Business-Card/card-back.svg"
+            src="card-back.svg"
             alt="名片背面"
             style={{ width: '100%', height: '100%', objectFit: 'cover', borderTopLeftRadius: 0, borderTopRightRadius: 16, borderBottomLeftRadius: 16, borderBottomRightRadius: 0 }} 
           />
