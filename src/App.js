@@ -227,7 +227,7 @@ export default function App() {
     <div style={{
       minHeight: '100vh',
       width: '100vw',
-      background: "url('/bg-main-energy.svg') center/cover no-repeat, linear-gradient(135deg, #e3ecfa 0%, #f6fafd 100%)",
+      background: "linear-gradient(135deg, #e3ecfa 0%, #f6fafd 100%)",
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
