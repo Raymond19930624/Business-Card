@@ -426,11 +426,7 @@ export default function CardPreview({ employee, fields, downloadMode, miaoliExtV
         >
           {/* 背面：顯示 card-back.svg 圖片 */}
           <img 
-            src={
-              window.location.pathname.startsWith('/Business-Card')
-                ? '/Business-Card/card-back.svg'
-                : process.env.PUBLIC_URL + '/card-back.svg'
-            }
+            src="/Business-Card/card-back.svg"
             alt="名片背面"
             style={{ width: '100%', height: '100%', objectFit: 'cover', borderTopLeftRadius: 0, borderTopRightRadius: 16, borderBottomLeftRadius: 16, borderBottomRightRadius: 0 }} 
           />
